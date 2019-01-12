@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/tools"
+    android:elevation="4dp"
+    android:padding="8dp"
+    android:layout_marginBottom="4dp"
+    android:background="#999797"
+    android:layout_height="65dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/imagesmallid"
+            android:layout_width="55dp"
+            android:layout_height="55dp"
+            fresco:fadeDuration="300"
+            fresco:actualImageScaleType="focusCrop"
+            fresco:placeholderImage="@color/wait_color"
+            fresco:placeholderImageScaleType="fitCenter"
+            fresco:failureImage="@drawable/error"
+            fresco:failureImageScaleType="centerInside"
+            fresco:retryImage="@drawable/retrying"
+            fresco:retryImageScaleType="centerCrop"
+            fresco:progressBarImage="@drawable/progress_bar"
+            fresco:progressBarImageScaleType="centerInside"
+            fresco:progressBarAutoRotateInterval="1000"
+            fresco:backgroundImage="@color/blue"
+            fresco:overlayImage="@drawable/watermark"
+            fresco:pressedStateOverlayImage="@color/red"
+            fresco:roundAsCircle="false"
+            fresco:roundedCornerRadius="1dp"
+            fresco:roundTopLeft="true"
+            fresco:roundTopRight="false"
+            fresco:roundBottomLeft="false"
+            fresco:roundBottomRight="true"
+            fresco:roundTopStart="false"
+            fresco:roundTopEnd="false"
+            fresco:roundBottomStart="false"
+            fresco:roundBottomEnd="false"
+            fresco:roundWithOverlayColor="@color/corner_color"
+            fresco:roundingBorderWidth="2dp"
+            fresco:roundingBorderColor="@color/border_color"
+            />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="Name"
+        android:textStyle="bold"
+        android:id="@+id/usernametextview"
+        android:textSize="16sp"
+        android:ellipsize="marquee"
+        android:layout_marginLeft="7dp"
+        android:paddingTop="3dp"
+        android:layout_alignTop="@+id/imagesmallid"
+        android:layout_toRightOf="@+id/imagesmallid"
+        android:layout_toEndOf="@+id/imagesmallid"
+        android:singleLine="true" />
+
+    <TextView
+        android:visibility="gone"
+        android:layout_marginTop="3dp"
+        android:id="@+id/fathernametxtviewid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Email"
+        android:layout_marginLeft="7dp"
+        android:paddingTop="3dp"
+        android:ellipsize="marquee"
+        android:layout_below="@+id/usernametextview"
+        android:layout_alignLeft="@+id/usernametextview"
+        android:layout_alignStart="@+id/usernametextview" />
+        <TextView
+            android:textStyle="italic"
+            android:paddingTop="3dp"
+            android:layout_marginTop="3dp"
+            android:id="@+id/villagetxtviewid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Institution"
+            android:ellipsize="end"
+            android:layout_below="@+id/fathernametxtviewid"
+            android:layout_alignLeft="@+id/fathernametxtviewid"
+            android:layout_alignStart="@+id/fathernametxtviewid" />
+    </RelativeLayout>
+
+</android.support.v7.widget.CardView>

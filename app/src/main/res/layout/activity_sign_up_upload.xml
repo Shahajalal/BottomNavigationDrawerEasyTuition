@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardid"
+        android:layout_marginTop="5dp"
+        app:cardBackgroundColor="#4bb6ef"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Please Upload Image Less Than 1MB"
+            android:textColor="@color/white_greyish"
+            android:textSize="15sp" />
+    </android.support.v7.widget.CardView>
+
+    <ImageView
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:id="@+id/igageviewid"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="300dp"
+        android:layout_height="250dp" />
+
+    <Button
+        android:id="@+id/choosebtn"
+        android:layout_below="@+id/igageviewid"
+        android:textColor="#fff"
+        android:background="@drawable/buttonstyle"
+        android:layout_marginTop="35dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/choose"/>
+    <com.rey.material.widget.ProgressView
+        android:visibility="gone"
+        android:id="@+id/signupprogressbarid"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        app:pv_autostart="true"
+        app:pv_circular="true"
+        app:pv_progressMode="indeterminate"
+        app:pv_progressStyle="@style/Material.Drawable.CircularProgress" />
+    <Button
+        android:id="@+id/uploadbtn"
+        android:layout_below="@+id/igageviewid"
+        android:textColor="#fff"
+        android:background="@drawable/buttonstyle"
+        android:layout_marginTop="35dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/signUpupload"/>
+
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_below="@+id/uploadbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:textStyle="italic"
+            android:id="@+id/details"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/transparent"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:hint="@string/details"
+            android:inputType="text"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="16sp" />
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:layout_below="@+id/details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:textStyle="italic"
+            android:id="@+id/fburl"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:background="@android:color/transparent"
+            android:drawablePadding="8dp"
+            android:gravity="center_vertical"
+            android:hint="Give Your Facebook Link"
+            android:inputType="text"
+            android:padding="10dp"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="16sp" />
+    </android.support.design.widget.TextInputLayout>
+</LinearLayout>
